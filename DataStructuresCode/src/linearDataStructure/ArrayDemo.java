@@ -60,6 +60,8 @@ public class ArrayDemo {
 		System.out.println(dynamicArr);
 		
 		System.out.println("Size of dynamic array " + dynamicArr.size());
+
+System.out.println();
 		
 	}
 
