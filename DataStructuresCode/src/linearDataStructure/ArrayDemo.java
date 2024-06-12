@@ -6,6 +6,7 @@ public class ArrayDemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		
 		//Simple array working in java
 		int[] arr = {1,2,3,4,5};
 		//System.out.println(arr[0]);
@@ -51,18 +52,35 @@ public class ArrayDemo {
 		dynamicArr.add("Aarti");
 		dynamicArr.add("Aruna");
 		
-		System.out.println("Dynamic Array");
+		System.out.println("Dynamic Array of string");
 		System.out.println(dynamicArr);
 		System.out.println("Size of dynamic array " + dynamicArr.size());
+
 		System.out.println();
 		dynamicArr.remove(5);
 		System.out.println("Dynamic Array After removing last entry");
 		System.out.println(dynamicArr);
-		
 		System.out.println("Size of dynamic array " + dynamicArr.size());
-
-System.out.println();
 		
-	}
+		System.out.println();
+		System.out.println("Dynamic Array using get method");
+		for (int i = 0; i < dynamicArr.size(); i++) {
+		      System.out.print(dynamicArr.get(i));
+		      System.out.print("  ");
+		}
+		
+		System.out.println();
+		
+		ArrayList<Integer> dynamicArr1 = new ArrayList<Integer>();
+		dynamicArr1.add(1);
+		dynamicArr1.add(2);
+		dynamicArr1.add(3);
+		dynamicArr1.add(4);
+		dynamicArr1.add(5);
+		
+		System.out.println();
+		System.out.println("Dynamic Array of numbers");
+		System.out.println(dynamicArr1);
+		System.out.println("Size of dynamic array " + dynamicArr1.size());
 
 }
