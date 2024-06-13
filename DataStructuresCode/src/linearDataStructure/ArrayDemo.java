@@ -6,7 +6,6 @@ public class ArrayDemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		
 		//Simple array working in java
 		int[] arr = {1,2,3,4,5};
 		//System.out.println(arr[0]);
@@ -82,5 +81,6 @@ public class ArrayDemo {
 		System.out.println("Dynamic Array of numbers");
 		System.out.println(dynamicArr1);
 		System.out.println("Size of dynamic array " + dynamicArr1.size());
+	}
 
 }
