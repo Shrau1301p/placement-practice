@@ -81,6 +81,7 @@ class StackByLinkedList{
 	}
 	StackByLinkedList(int data){
 		this.data = data;
+		this.next = null;
 	}
 	
 	//Insert The Elements to Stack
