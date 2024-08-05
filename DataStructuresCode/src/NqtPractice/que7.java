@@ -90,15 +90,29 @@ public class que7 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a Day:");
+		System.out.println("Enter a String:");
 		String word=sc.next();
-		System.out.println("Array Length Should be:");
+		System.out.println("Substring Length Should be:");
 		int n=sc.nextInt();
-		
+		int j;
+		int maxCount=0;
 		for(int i=0; i<=word.length();i=i+3) {
-			String subString = word.substring(i,i+3);
-			System.out.println(subString);
+			j = i+n-1;
+			if(j < word.length()-1) {
+				String subString = word.substring(i,i+n);
+				int count =0;
+				for(int a=0; a<n;a++) {
+					char letter = subString.charAt(a);
+					if( letter == 'a') {
+						count ++;
+					}
+				}
+				if(count > maxCount) {
+					maxCount = count;
+				}
+			}
 		}
+		System.out.println(maxCount);
 	}
 
 }
