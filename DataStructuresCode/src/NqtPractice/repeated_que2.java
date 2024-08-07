@@ -51,10 +51,43 @@
 
 package NqtPractice;
 
+import java.util.Scanner;
+
 public class repeated_que2 {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int[][] trainee = new int[3][3];
+		int avg[]=new int[3];
+
+		System.out.println("Enter Array Element:");
+		 for(int i = 0; i < 3; i++) {
+	   		 for(int j = 0; j < 3; j++) {
+	   			 trainee[i][j] = sc.nextInt();
+	   			 if(trainee[i][j] < 1 || trainee[i][j] > 100) {
+	   				 trainee[i][j] = 0;
+	   			 }
+	   		 }
+	   	}
+		int max=0;
+		for (int i = 0; i < 3; i++) {
+			int sum=0;
+			for(int j = 0; j < 3; j++) {
+				sum = sum + trainee[j][i];
+			}
+			avg[i] = sum/3;
+			if(avg[i] > max)
+				max=avg[i];
+		}
 		
+		for (int i = 0; i < 3; i++) {
+			if(avg[i] == max) {
+				System.out.println("Trainee Number: "+i+1);
+			} 
+			 if(avg[i] <70) {
+	   			 System.out.print("Trainee is Unfit");
+	   		 }
+		}
 	}
 
 }
