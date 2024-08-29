@@ -58,23 +58,24 @@ import java.util.Scanner;
 public class que16 {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Array length shoul be:");
-		int n=sc.nextInt();
-		String colors[]=new String[n];		
-		int count =0 , max = 0;
-		System.out.println("Enter color:");
-		for(int i=0;i< n;i++)
-			colors[i]=sc.next();
-		for(int i=0;i< n;i++){
-			for(int j=0;j< n;j++){
-				if(colors[i].equalsIgnoreCase(colors[j]))
-					count ++;
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("Array length shoul be:");
+			int n=sc.nextInt();
+			String colors[]=new String[n];		
+			int count =0 ;
+			System.out.println("Enter color:");
+			for(int i=0;i< n;i++)
+				colors[i]=sc.next();
+			for(int i=0;i< n;i++){
+				for(int j=0;j< n;j++){
+					if(colors[i].equalsIgnoreCase(colors[j]))
+						count ++;
+				}
+				if(count % 2 != 0) {
+					System.out.println("Balloon with odd numbers of occurence are color "+colors[i]);
+					return;
+				}	
 			}
-			if(count % 2 != 0) {
-				System.out.println("Balloon with odd numbers of occurence are color "+colors[i]);
-				return;
-			}	
 		}	
 	}
 

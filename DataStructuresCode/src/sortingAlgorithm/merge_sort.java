@@ -12,9 +12,7 @@ public class merge_sort {
 		ArrayList<Integer> temp = new ArrayList<>(); // temporary array
         int left = low;      // starting index of left half of arr
         int right = mid + 1;   // starting index of right half of arr
-
-        //storing elements in the temporary array in a sorted manner//
-
+     
         while (left <= mid && right <= high) {
             if (arr[left] <= arr[right]) {
                 temp.add(arr[left]);
@@ -44,7 +42,7 @@ public class merge_sort {
 	}
 	
 	public static void mergeSort(int arr[], int low,  int high) {
-		if (low > high) return;
+		if (low >= high) return;
 		int mid = (low + high)/2;
 		mergeSort(arr, low, mid);  // left half
         mergeSort(arr, mid + 1, high); // right half

@@ -20,27 +20,28 @@ import java.util.Scanner;
 
 public class que12 {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a string");
-		String pattern=sc.next();
-		int hashCount=0, asterisk=0;
-		for (int i = 0; i < pattern.length(); i++) {
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter a string");
+			String pattern=sc.next();
+			int hashCount=0, asterisk=0;
+			for (int i = 0; i < pattern.length(); i++) {
 //			System.out.println(pattern.charAt(i));
-			if(pattern.charAt(i) == '#') {
-				hashCount++;
-			} else if(pattern.charAt(i) == '*') {
-				asterisk++;
-			} else {
-				System.out.println("Invalid Input");
-				return;
+				if(pattern.charAt(i) == '#') {
+					hashCount++;
+				} else if(pattern.charAt(i) == '*') {
+					asterisk++;
+				} else {
+					System.out.println("Invalid Input");
+					return;
+				}
 			}
-		}
-		if(hashCount == asterisk) {
-			System.out.println(0 + " → number of * and # are equal");
-		} else if(hashCount > asterisk){
-			System.out.println( asterisk +" → number of * and # are equal");
-		} else {
-			System.out.println(hashCount +" → number of * and # are equal");
+			if(hashCount == asterisk) {
+				System.out.println(0 + " → number of * and # are equal");
+			} else if(hashCount > asterisk){
+				System.out.println( asterisk +" → number of * and # are equal");
+			} else {
+				System.out.println(hashCount +" → number of * and # are equal");
+			}
 		}
 		
 	}
